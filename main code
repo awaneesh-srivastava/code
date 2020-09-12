@@ -1,0 +1,614 @@
+# Awaneesh Srivastava: #20 Magical Python Tricks To Write Better Code
+
+#you an make your code efficient and fast using some tricks and tips
+
+#I have put very basic but efficient tricks
+
+#Share this code with everyone and increase your Knowledge Section
+
+#Upvote and comment if you like my code
+
+name = input("Enter your name: ").title().strip()
+print(name)
+print()
+
+
+print("Welcome to the Amazing, Mysterious and Adventurous World Of Python", "'{}'".format(name), "where you'll learn some cool and efficient Python Tricks.\n\nI hope you'll gain some knowledge from this code.\n\nKeep Exploring and Learning\n")
+
+print("__"*20)
+
+
+print("""
+20 Magical Python Tricks To Write Better Code
+
+
+Trick 1: Multiple Assignment for variables""")
+
+print("__"*20)
+
+print("""
+Condition I - Values equal to Variables
+
+When the variables and values of multiple assignments are equal, each value will be stored in all the variables.
+
+a, b = 10, 20
+print(a, b)
+
+Output:
+""")
+
+a, b = 10, 20
+print(a, b)
+
+#print()
+
+print("__"*20)
+
+print("""
+Condition II - Values greater than Variables
+
+Let us try to increase the number of values in the previous program. The multiple values can be assigned to a single variable. While assigning more than one value to a variable we must use an asterisk before the variable name.
+
+a, *b = 10, 20, 30
+print(a)
+print(b)
+
+Output:
+""")
+
+a, *b = 10, 20, 30
+print(a)
+print(b)
+
+print("""
+The first value will be assigned to the first variable. The second variable will take a collection of values from the given values. This will create a list type object.""")
+
+print("__"*20)
+
+print("""
+Condition III - One Value to Multiple Variables
+
+We can assign a value to more than one variable. Each variable will be separated using an equal to symbol.
+
+a = b = c = 10
+print(a)
+print(b)
+print(c)
+
+Output:
+""")
+
+a = b = c = 10
+print(a)
+print(b)
+print(c)
+
+print("__"*20)
+
+print(
+"""
+Trick 02 - Swapping Two Variables
+
+Swapping is the process of exchanging the values of two variables with each other. This can be useful in many operations in computer science. Here, I have written two major methods used by the programmer to swap the values as well as the optimal solution."""
+)
+
+print("__"*20)
+
+print(
+"""
+Method I - Using a temporary variable
+
+This method uses a temporary variable to store some data. The following code is written with temporary variable name.
+
+a , b = 50 , 60
+print(a,b)
+temp = a+b
+b = a
+a = temp-b
+print()
+print("After swapping:",a,b)
+
+Output:
+""")
+
+a , b = 50 , 60
+print(a,b)
+temp = a+b
+b = a
+a = temp-b
+print()
+print("After swapping:",a,b)
+
+print("__"*20)
+
+print("""
+Method II - Without using a temporary variable
+The following code swaps the variable without using a temporary variable.
+
+a , b = 50 , 60
+print(a,b)
+a = a+b
+b = a-b
+a = a-b
+print()
+print("After swapping:",a,b)
+
+Output:
+""")
+
+a , b = 50 , 60
+print(a,b)
+a = a+b
+b = a-b
+a = a-b
+print()
+print("After swapping:",a,b)
+
+print("__"*20)
+
+print("""
+Method III - Optimal Solution in Python
+
+This is a different approach to swap variables using python. In the previous section, we have learned about multiple assignments. We can use the concept of swapping.
+
+a , b = 50 , 60
+print(a,b)
+a , b = b , a
+print()
+print("After swapping",a,b)
+
+Output:
+""")
+
+a , b = 50 , 60
+print(a,b)
+a , b = b , a
+print()
+print("After swapping",a,b)
+
+print("__"*20)
+
+print("""
+Trick 03 - Reversing a String
+
+There is an another cool trick for reversing a string in python. The concept used for reversing a string is called string slicing. Any string can be reversed using the symbol [::-1] after the variable name.
+
+string = "PYTHON"
+rev_string = string[::-1]
+print(rev_string)
+
+Output:
+""")
+
+string = "PYTHON"
+rev_string = string[::-1]
+print(rev_string)
+
+print("__"*20)
+
+print("""
+Trick 04 - Joining Two strings
+
+Joining is a method which is used to join two or more strings. This can be done by various methods""")
+
+print("__"*20)
+
+print("""
+Method-I: Using Addition Operator
+
+Joining various strings can be done just using the addition operator (+).
+
+a = "I Love "
+b = "Python"
+print(a+b)
+
+Output:
+""")
+
+a = "I Love "
+b = "Python"
+print(a+b)
+
+print("__"*20)
+
+print("""
+Method-II: Using join function
+
+Joining various strings can be done just using the join function. It is more fast and better way to join two or more strings.
+
+a = "I Love"
+b = "Python"
+joined_strings = " ".join([a, b])
+print(joined_strings)
+
+Output:
+""")
+
+a = "I Love"
+b = "Python"
+joined_strings = " ".join([a, b])
+print(joined_strings)
+
+print("__"*20)
+
+print("""
+Trick 05 - More than one Conditional Operators
+
+Two combine two or more conditional operators in a program we can use the logical operators. But the same result can be obtained by chaining the operators. For example, if we need to do print something when a variable has the value greater than 10 and less than 20, the code will be something like the following.
+
+a = 15
+if (a>10 and a<20):
+   print("Hi")
+
+Instead of this we can combine the conditional operator into single expression.
+
+a = 15
+if (10 < a < 20):
+   print("Hi")
+
+Output:
+""")
+
+a = 15
+if (10 < a < 20):
+   print("Hi")
+   
+print("__"*20)
+
+print("""
+Trick 06 - Find most frequent element in a list
+
+The element which occurs most of the time in a list then it will be the most frequent element in the list. The following snippet will help you to get the most frequent element from a list.
+
+my_list = [1, 2, 3, 4, 6, 1, 3, 8, 3]
+most_frequent = max(set(my_list),key=my_list.count)
+print(most_frequent)
+
+Output:
+""")
+
+my_list = [1, 2, 3, 4, 6, 1, 3, 8, 3]
+most_frequent = max(set(my_list),key=my_list.count)
+print(most_frequent)
+
+print("__"*20)
+
+print("""
+Trick 07 - Find Occurrence of all elements in list
+
+The previous code will give the most frequent value. If we need to know the occurrence of all the unique element in a list, then we can go for the collection module. The collections is a wonderful module in python which gives great features. The Counter method gives a dictionary with the element and occurrence pair.
+
+from collections import Counter
+
+my_list = [1, 2, 3, 4, 6, 1, 3, 8, 3]
+print(Counter(my_list))
+
+Output:
+""")
+
+from collections import Counter
+
+my_list = [1, 2, 3, 4, 6, 1, 3, 8, 3]
+print(Counter(my_list))
+
+print("__"*20)
+
+print("""
+Trick 08 - Checking for Anagram of Two strings
+
+Two strings are anagrams if one string is made up of the characters in the other string. We can use the same Counter method from the collections module.
+
+from collections import Counter
+
+string_1 = "HEART"
+string_2 = "EARTH"
+
+if(Counter(string_1) == Counter(string_2)):
+   print("Anagram")
+else:
+   print("Not Anagram")
+   
+Output:
+""")
+
+from collections import Counter
+
+string_1 = "HEART"
+string_2 = "EARTH"
+
+if(Counter(string_1) == Counter(string_2)):
+   print("Anagram")
+else:
+   print("Not Anagram")
+
+print("__"*20)
+
+print("""
+Trick 09 - Create Number Sequence with range
+
+The function range() is useful for creating a sequence of numbers. It can be useful in many code snippets. The syntax for a range function is written here.
+
+Syntax: range(start, end, step)
+
+Let us try to create a list of even numbers.
+
+lst = list(range(2,20,2))
+print(lst)
+
+Output:
+""")
+
+lst = list(range(2,20,2))
+print(lst)
+
+print("__"*20)
+
+print("""
+Trick 10 - Convert Mutable into Immutable
+
+The function frozenset() is used to convert mutable iterable into immutable object. Using this we can freeze an object from changing its value.
+
+try:
+   lst = [1,2,3,4,5]
+   lst = frozenset(lst)
+   lst[3]=7
+   print(lst)
+except TypeError:
+   print("frozenset object does not support item assignment")
+
+Output:
+""")
+
+try:
+   lst = [1,2,3,4,5]
+   lst = frozenset(lst)
+   lst[3]=7
+   print(lst)
+except TypeError:
+   print("frozenset object does not support item assignment\n")
+   
+print("As we applied the frozenset() function on the list, the item assignment is restricted.")
+
+print("__"*20)
+
+print("""
+Trick 11 - Merging Two Dictionaries in Python
+
+In python, we can merge two dictionaries without any specific method. Below code is an example for merging two dictionaries.
+
+dict_1 = {'One':1, 'Two':2}
+dict_2 = {'Two':2, 'Three':3}
+dictionary = {**dict_1, **dict_2}
+print(dictionary)
+
+Output:
+""")
+
+dict_1 = {'One':1, 'Two':2}
+dict_2 = {'Two':2, 'Three':3}
+dictionary = {**dict_1, **dict_2}
+print(dictionary)
+
+print("__"*20)
+
+print("""
+Trick 12 - Getting size of an object
+
+The memory size varies based on the type of object. We can get the memory of an object using getsizeof() function from the sys module.
+
+import sys
+
+x = 5
+print(sys.getsizeof(x))
+
+Output:
+""")
+
+import sys
+
+x = 5
+print(sys.getsizeof(x))
+
+print("__"*20)
+
+print("""
+Trick 13 - Combining two lists into a dictionary
+
+The zip unction has many advantages in python. Using zip function we can create a dictionary from two lists.
+
+list_1 = ["One","Two","Three"]
+list_2 = [1,2,3]
+dictionary = dict(zip(list_1, list_2))
+print(dictionary)
+
+Output:
+""")
+
+list_1 = ["One","Two","Three"]
+list_2 = [1,2,3]
+dictionary = dict(zip(list_1, list_2))
+print(dictionary)
+
+print("__"*20)
+
+print("""
+Trick 14 - Calculating execution time for a program
+
+Time is another useful module in python can be used to calculate the execution time.
+
+import time
+
+start = time.perf_counter()
+
+for x in range(10):
+   pass
+   
+end = time.perf_counter()
+total = end - start
+print(total)
+
+Output:
+""")
+
+import time
+
+start = time.perf_counter()
+
+for x in range(10):
+   pass
+   
+end = time.perf_counter()
+total = end - start
+print(total)
+
+print("__"*20)
+
+print("""
+Trick 15 - Removing Duplicate elements in list
+
+An element that occurs more than one time is called duplicate element. We can remove the duplicate elements simply using typecasting.
+
+lst = [1,4,1,8,2,8,4,5]
+lst = list(set(lst))
+print(lst)
+
+Output:
+""")
+
+lst = [1,4,1,8,2,8,4,5]
+lst = list(set(lst))
+print(lst)
+
+print("__"*20)
+
+print("""
+Trick 16 - Create functions in one line
+
+Lambda is an anonymous function in python that creates function in one line. The syntax for using a lambda function is given here.
+
+Syntax: lambda arguments: expression
+
+x = lambda a,b,c : a+b+c
+print(x(10,20,30))
+
+Output:
+""")
+
+x = lambda a,b,c : a+b+c
+print(x(10,20,30))
+
+print("__"*20)
+
+print("""
+Trick 17 - Rounding off with Floor and Ceil
+
+Floor and Ceil are mathematical functions can be used on floating numbers. 
+
+•The floor function returns an integer smaller than the floating value.
+
+•The ceil function returns the integer greater than the floating value. 
+
+To use this functions we have to import math module.
+
+import math
+
+num = 18.7
+print(math.floor(num))
+print(math.ceil(num))
+
+Output:
+""")
+
+import math
+
+num = 18.7
+print(math.floor(num))
+print(math.ceil(num))
+
+print("__"*20)
+
+print("""
+Trick 18 - Using Conditions in Ternary Operator
+
+In most of the time, we use nested conditional structures in Python. Instead of using nested structure, a single line can be replaced with the help of ternary operator. The syntax is given below.
+
+Syntax: Statement1 if True else Statement2
+
+age = 25
+
+print("Eligible") if age > 20 else print("Not Eligible")
+
+Output:
+""")
+
+age = 25
+
+print("Eligible") if age > 20 else print("Not Eligible")
+
+print("__"*20)
+
+print("""
+Trick 19 - List Comprehension with Python
+
+List comprehension is a very compact way to create a list from another list. Look at the following codes. The first one is written using simple iteration and the second one is created using list comprehension.
+
+square_list = []
+
+for x in range(1,10):
+   y = x**2
+   square_list.append(y)
+   
+print(square_list)
+
+Output:
+""")
+
+square_list = []
+
+for x in range(1,10):
+   y = x**2
+   square_list.append(y)
+   
+print(square_list)
+
+print("""
+Using List Comprehension
+
+square_list = [x**2 for x in range(1,10)]
+print(square_list)
+
+Output:
+""")
+
+square_list = [x**2 for x in range(1,10)]
+print(square_list)
+
+print("__"*20)
+
+print("""
+Trick 20 - Apply function for all elements in list
+
+Map is a higher order function that applies a particular function for all the elements in list.
+
+Syntax: map(function, iterable)
+
+lst = ["divyanshu", "amit"]
+new_lst = map(str.capitalize, lst)
+print(list(new_lst))
+
+Output:
+""")
+
+lst = ["divyanshu", "amit"]
+new_lst = map(str.capitalize, lst)
+print(list(new_lst))
+
+print("__"*20)
+
+print("\nYour Knowledge Level is increased by 20%⬆️⬆️⬆️\n")
+
+print("""☝️☝️☝️Hit an upvote if you found this code informative☝️☝️☝️
+
+Thanks for visiting this code 🧙🏻‍♂️🧙🏻‍♂️🧙🏻‍♂️
+""")
+
